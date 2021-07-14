@@ -116,16 +116,16 @@ li {
     font-size: 25px;
 }
 
-#centro {
+/* #centro {
     margin-left: 100px;
     margin-right: 100px;
     padding-bottom: 50px;
-    margin-top: 75px;
+    margin-top: 15px;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-}
+} */
 
 #galeriaImagen {
     border-bottom: 1px solid rgb(255, 99, 71);
@@ -169,6 +169,8 @@ div{
 
 .contacto {
     padding-bottom: 50px;
+    padding-top: 10px;
+    margin-top: 5px;
 }
 
 #grilla {
@@ -268,4 +270,19 @@ div{
 .precioC3 {
     grid-area: precioC3;
     text-align: center;
-}   
+} 
+
+.fieldsetConsulta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    padding-right: 30px;
+    padding-top: 10px;
+
+}
