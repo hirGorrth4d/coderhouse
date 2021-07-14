@@ -77,7 +77,7 @@ ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    
 }
 
 form{
@@ -97,6 +97,7 @@ form label {
 }
 
 .alineacionfooter li {
+    padding-left: 10px;
     margin-right: 100px;
     margin-bottom: 50px;
 }
@@ -105,6 +106,8 @@ form label {
     margin-top: 5px;
     padding-top: 20px;
     border-top: 1px solid rgb(255, 99, 71);
+    display: flex;
+    justify-content: flex-end;
 }
 
 h3 {
@@ -116,7 +119,7 @@ li {
     font-size: 25px;
 }
 
-/* #centro {
+#centro {
     margin-left: 100px;
     margin-right: 100px;
     padding-bottom: 50px;
@@ -125,7 +128,8 @@ li {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-} */
+    position: sticky;
+}
 
 #galeriaImagen {
     border-bottom: 1px solid rgb(255, 99, 71);
@@ -293,4 +297,12 @@ fieldset {
     padding-right: 30px;
     padding-top: 10px;
 
+}
+
+.iconos {
+    display: flex;
+    flex-direction: row;
+    padding-right: 10px;
+    margin: 5px;
+    justify-content: right;
 }
