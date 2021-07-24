@@ -67,13 +67,8 @@ ul {
     margin: auto;
     padding-top: 20px;
     padding-bottom: 20 px;
-    transition: 1s;
 }
-.imagen:hover {
-    width: 600px;
-    height: 600px;
-    border-radius: 0%;
-}
+
 
 .alineacionfooter ul {
     list-style-type: none;
