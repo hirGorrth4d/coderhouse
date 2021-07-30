@@ -3,6 +3,7 @@ $color2: rgb(255, 99, 71);
 $color3: white;
 $color4: gray;
 $fonts: 'Nunito', sans-serif;
+$margen: 600px / 2;
 
 body {
     background-color: $color1;
@@ -35,8 +36,8 @@ p {
 }
 
 .alineacionnav {
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 50px - 20px;
+    font-weight: 1200/2;
     border-top: 1px solid $color2;
     border-bottom: 1px solid $color2;
     margin-bottom: 45px;
@@ -93,8 +94,8 @@ form {
     text-align: center;
     font-family: $fonts;
     font-weight: 200;
-    padding-right: 300px;
-    padding-left: 300px;
+    padding-right: $margen;
+    padding-left: $margen;
     margin-left: 100px;
     margin-right: 100px;
 
@@ -232,10 +233,6 @@ div {
     text-align: center;
 }   
 
-.precio3 {
-    grid-area: precio3;
-    text-align: center;
-}   
 .precioA1 {
     grid-area: precioA1;
     text-align: center;

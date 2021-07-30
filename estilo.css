@@ -32,7 +32,7 @@ p {
 
 .alineacionnav {
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 1200/2;
   border-top: 1px solid tomato;
   border-bottom: 1px solid tomato;
   margin-bottom: 45px;
@@ -208,10 +208,7 @@ div {
 #grilla {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "espacioVacio precio1 precio2 precio3"
- "servicioA precioA1 precioA2 precioA3"
- "servicioB precioB1 precioB2 precioB3"
- "servicioC precioC1 precioC2 precioC3";
+      grid-template-areas: "espacioVacio precio1 precio2 precio3" "servicioA precioA1 precioA2 precioA3" "servicioB precioB1 precioB2 precioB3" "servicioC precioC1 precioC2 precioC3";
   -ms-grid-rows: 50px 50px 50px 50px;
       grid-template-rows: 50px 50px 50px 50px;
   -ms-grid-columns: 10% 10% 10% 10%;
@@ -275,13 +272,6 @@ div {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: precio2;
-  text-align: center;
-}
-
-.precio3 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
-  grid-area: precio3;
   text-align: center;
 }
 
