@@ -1,0 +1,282 @@
+$color1: black;
+$color2: rgb(255, 99, 71);
+$color3: white;
+$color4: gray;
+$fonts: 'Nunito', sans-serif;
+
+body {
+    background-color: $color1;
+    color: $color2;
+    font-family: $fonts;
+    h1 {
+        font-size: 300%;
+    }
+}
+
+header {
+    margin-top: 35px;
+    margin-left: 30px;
+    padding-left: 50px;
+}
+
+section {
+    font-size: 15px;
+}
+h2{
+    text-align: center;
+    font-weight: 400;
+    font-size: 25x;
+}
+
+p {
+    font-size: 20px;
+    font-family:$fonts;
+    text-align: center;
+}
+
+.alineacionnav {
+    font-size: 30px;
+    font-weight: 600;
+    border-top: 1px solid $color2;
+    border-bottom: 1px solid $color2;
+    margin-bottom: 45px;
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    li {
+        display: flex;
+        text-align: center;
+        padding: 25px;
+    }
+}
+
+ul {
+    text-align: center;
+    list-style-type: none;
+}
+
+.imagen {
+    border-radius:  50%;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.alineacionfooter {
+    margin-top: 35px;
+    padding-top: 100px;
+    border-top: 1px solid $color2;
+    display: flex;
+    justify-content: flex-end;
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+    }
+
+    li {
+        padding-left: 10px;
+        margin-right: 100px;
+        margin-bottom: 50px; 
+    }
+}
+
+form {
+    text-align: center;
+    font-family: $fonts;
+    font-weight: 200;
+    padding-right: 300px;
+    padding-left: 300px;
+    margin-left: 100px;
+    margin-right: 100px;
+
+    label {
+        color: $color3;
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+
+h3 {
+    text-align: center;
+    font-family: $fonts;
+}
+
+li {
+    font-size: 25px;
+}
+
+#centro {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: sticky;
+}
+
+#galeriaImagen {
+    border-bottom: 1px solid $color2;
+}
+
+.mapa {
+    margin-left: 450px;
+    position: sticky;
+    display: block;
+    margin: auto;
+    transition: 1s;
+    &:hover {
+        width: 550px;
+        height: 550px;
+        border-radius: 50px;
+    }
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+        color: $color4;
+    }
+}
+
+div {
+    padding-left: 2px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    border-style: hidden;
+    border-width: 5px;
+    overflow: hidden;
+    width: 100%;
+    height: 90%;
+}
+
+.contacto {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    margin-top: 5px;
+    justify-content: center;
+}
+
+#grilla {
+    display: grid;
+    grid-template-areas:
+        "espacioVacio precio1 precio2 precio3"
+        "servicioA precioA1 precioA2 precioA3"
+        "servicioB precioB1 precioB2 precioB3"
+        "servicioC precioC1 precioC2 precioC3";
+    grid-template-rows: 50px 50px 50px 50px;
+    grid-template-columns: 10% 10% 10% 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    grid-column-gap: 55px;
+    grid-row-gap: 25px;
+    padding-left: 25px;
+    margin-left: 25px;
+}
+
+.bordeServicios {
+    margin {
+        bottom: 50px;
+        left: 50px;
+        right: 50px;
+    }
+    padding-bottom: 20px;
+}
+
+.espacioVacio{
+    grid-area: espacioVacio;
+}
+
+.servicioA {
+    grid-area: servicioA;
+    text-align: center;
+}
+
+.servicioB {
+    grid-area: servicioB;
+    text-align: center;
+}
+
+.servicioC {
+    grid-area: servicioC;
+    text-align: center;
+
+}
+
+.precio1 {
+    grid-area: precio1;
+    text-align: center;
+}
+
+.precio2 {
+    grid-area: precio2;
+    text-align: center;
+}
+.precio3 {
+    grid-area: precio3;
+    text-align: center;
+}   
+
+.precio3 {
+    grid-area: precio3;
+    text-align: center;
+}   
+.precioA1 {
+    grid-area: precioA1;
+    text-align: center;
+}   
+.precioA2 {
+    grid-area: precioA2;
+    text-align: center;
+}   
+.precioA3 {
+    grid-area: precioA3;
+    text-align: center;
+}   
+.precioB1 {
+    grid-area: precioB1;
+    text-align: center;
+}   
+.precioB2 {
+    grid-area: precioB2;
+    text-align: center;
+}   
+.precioB3 {
+    grid-area: precioB3;
+    text-align: center;
+}   
+.precioC1 {
+    grid-area: precioC1;
+    text-align: center;
+}   
+.precioC2 {
+    grid-area: precioC2;
+    text-align: center;
+}   
+.precioC3 {
+    grid-area: precioC3;
+    text-align: center;
+} 
+
+.iconos {
+    display: flex;
+    flex-direction: row;
+    padding-right: 10px;
+    margin: 5px;
+    justify-content: right;
+}

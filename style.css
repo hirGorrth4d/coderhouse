@@ -275,27 +275,6 @@ div{
     text-align: center;
 } 
 
-.fieldsetConsulta {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 10px;
-}
-
-.fieldsetDatos {
-    margin-left: 5px;
-    padding: 5px;
-    width: 500px;
-}
-
-fieldset {
-    display: flex;
-    flex-direction: column;
-    padding-right: 30px;
-    padding-top: 10px;
-
-}
-
 .iconos {
     display: flex;
     flex-direction: row;
