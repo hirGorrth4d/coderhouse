@@ -4,9 +4,11 @@ $color3: white;
 $color4: gray;
 $fonts: 'Nunito', sans-serif;
 $margen: 600px / 2;
+$imagenDeFondo: url("img/fondo.svg");
 
 body {
     background-color: $color1;
+    background-image: $imagenDeFondo; 
     color: $color2;
     font-family: $fonts;
     h1 {
@@ -14,10 +16,12 @@ body {
     }
 }
 
+
 header {
     margin-top: 35px;
     margin-left: 30px;
     padding-left: 50px;
+    
 }
 
 section {
@@ -27,6 +31,7 @@ h2{
     text-align: center;
     font-weight: 400;
     font-size: 25x;
+    border-bottom: 10px;
 }
 
 p {
@@ -41,18 +46,21 @@ p {
     border-top: 1px solid $color2;
     border-bottom: 1px solid $color2;
     margin-bottom: 45px;
+    
 
     ul {
         list-style-type: none;
         display: flex;
         flex-direction: row;
         justify-content: center;
+
     }
 
     li {
         display: flex;
         text-align: center;
         padding: 25px;
+        
     }
 }
 
@@ -70,7 +78,22 @@ ul {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    }
+    @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    } 
 .alineacionfooter {
     margin-top: 35px;
     padding-top: 100px;
@@ -142,7 +165,7 @@ li {
         height: 550px;
         border-radius: 50px;
     }
-
+    
 }
 
 a {
@@ -150,7 +173,81 @@ a {
     color: inherit;
     &:hover {
         color: $color4;
-    }
+        -webkit-animation-name: bounceIn;
+        animation-name: bounceIn;
+        -webkit-animation-duration: .75s;
+        animation-duration: .75s;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        }
+        @-webkit-keyframes bounceIn {
+        0%, 20%, 40%, 60%, 80%, 100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        }
+        0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+        }
+        20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+        }
+        40% {
+        -webkit-transform: scale3d(.9, .9, .9);
+        transform: scale3d(.9, .9, .9);
+        }
+        60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03);
+        }
+        80% {
+        -webkit-transform: scale3d(.97, .97, .97);
+        transform: scale3d(.97, .97, .97);
+        }
+        100% {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        }
+        }
+        @keyframes bounceIn {
+        0%, 20%, 40%, 60%, 80%, 100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        }
+        0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+        }
+        20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+        }
+        40% {
+        -webkit-transform: scale3d(.9, .9, .9);
+        transform: scale3d(.9, .9, .9);
+        }
+        60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03);
+        }
+        80% {
+        -webkit-transform: scale3d(.97, .97, .97);
+        transform: scale3d(.97, .97, .97);
+        }
+        100% {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        }
+        }
 }
 
 div {
