@@ -10,24 +10,24 @@ body h1 {
 }
 
 header {
-  margin-top: 35px;
-  margin-left: 30px;
-  padding-left: 50px;
+  margin-top: 2.1875rem;
+  margin-left: 1.875rem;
+  padding-left: 3.125rem;
 }
 
 section {
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 
 h2 {
   text-align: center;
   font-weight: 400;
-  font-size: 25x;
-  border-bottom: 10px;
+  font-size: 1.5625rem;
+  border-bottom: 0.625rem;
 }
 
 p {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-family: "Nunito", sans-serif;
   text-align: center;
 }
@@ -37,7 +37,7 @@ p {
   font-weight: 1200/2;
   border-top: 1px solid tomato;
   border-bottom: 1px solid tomato;
-  margin-bottom: 45px;
+  margin-bottom: 2.8125rem;
 }
 
 .alineacionnav ul {
@@ -59,7 +59,7 @@ p {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-  padding: 25px;
+  padding: 1.5625rem;
 }
 
 ul {
@@ -78,8 +78,8 @@ ul {
       -ms-flex-pack: center;
           justify-content: center;
   margin: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .fadeIn {
@@ -150,7 +150,7 @@ form {
 
 form label {
   color: white;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
 }
 
@@ -160,15 +160,15 @@ h3 {
 }
 
 li {
-  font-size: 25px;
+  font-size: 1.5625rem;
 }
 
 #centro {
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-top: 15px;
-  margin-bottom: 20px;
-  padding-bottom: 50px;
+  margin-left: 6.25rem;
+  margin-right: 6.25rem;
+  margin-top: 0.9375rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 3.125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,7 +187,7 @@ li {
 }
 
 .mapa {
-  margin-left: 450px;
+  margin-left: 28.125rem;
   position: -webkit-sticky;
   position: sticky;
   display: block;
@@ -197,9 +197,9 @@ li {
 }
 
 .mapa:hover {
-  width: 550px;
-  height: 550px;
-  border-radius: 50px;
+  width: 34.375rem;
+  height: 34.375rem;
+  border-radius: 3.125rem;
 }
 
 a {
@@ -288,9 +288,9 @@ a:hover {
 }
 
 div {
-  padding-left: 2px;
-  padding-right: 5px;
-  padding-bottom: 5px;
+  padding-left: 0.125rem;
+  padding-right: 0.3125rem;
+  padding-bottom: 0.3125rem;
   border-style: hidden;
   border-width: 5px;
   overflow: hidden;
@@ -302,9 +302,9 @@ div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 10px;
-  padding-bottom: 50px;
-  margin-top: 5px;
+  padding-top: 0.625rem;
+  padding-bottom: 3.125rem;
+  margin-top: 0.3125rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -318,25 +318,25 @@ div {
       grid-template-rows: 50px 50px 50px 50px;
   -ms-grid-columns: 10% 10% 10% 10%;
       grid-template-columns: 10% 10% 10% 10%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  grid-column-gap: 55px;
-  grid-row-gap: 25px;
-  padding-left: 25px;
-  margin-left: 25px;
+  grid-column-gap: 3.4375rem;
+  grid-row-gap: 1.5625rem;
+  padding-left: 1.5625rem;
+  margin-left: 1.5625rem;
 }
 
 .bordeServicios {
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
 }
 
 .bordeServicios margin {
-  bottom: 50px;
-  left: 50px;
-  right: 50px;
+  bottom: 3.125rem;
+  left: 3.125rem;
+  right: 3.125rem;
 }
 
 .espacioVacio {
@@ -458,8 +458,8 @@ div {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding-right: 10px;
-  margin: 5px;
+  padding-right: 0.625rem;
+  margin: 0.3125rem;
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;

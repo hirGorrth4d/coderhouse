@@ -6,6 +6,12 @@ $fonts: 'Nunito', sans-serif;
 $margen: 600px / 2;
 $imagenDeFondo: url("img/fondo.svg");
 
+@function toRem($valor) {
+    $remValor: ($valor / 16) + rem;
+
+    @return $remValor;
+}
+
 body {
     background-color: $color1;
     background-image: $imagenDeFondo; 
@@ -18,24 +24,24 @@ body {
 
 
 header {
-    margin-top: 35px;
-    margin-left: 30px;
-    padding-left: 50px;
+    margin-top: toRem(35);
+    margin-left: toRem(30);
+    padding-left: toRem(50);
     
 }
 
 section {
-    font-size: 15px;
+    font-size: toRem(15);
 }
 h2{
     text-align: center;
     font-weight: 400;
-    font-size: 25x;
-    border-bottom: 10px;
+    font-size: toRem(25);
+    border-bottom: toRem(10);
 }
 
 p {
-    font-size: 20px;
+    font-size: toRem(20);
     font-family:$fonts;
     text-align: center;
 }
@@ -45,7 +51,7 @@ p {
     font-weight: 1200/2;
     border-top: 1px solid $color2;
     border-bottom: 1px solid $color2;
-    margin-bottom: 45px;
+    margin-bottom: toRem(45);
     
 
     ul {
@@ -59,7 +65,7 @@ p {
     li {
         display: flex;
         text-align: center;
-        padding: 25px;
+        padding: toRem(25);
         
     }
 }
@@ -75,8 +81,8 @@ ul {
     display: flex;
     justify-content: center;
     margin: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: toRem(20);
+    padding-bottom: toRem(20);
 }
 .fadeIn {
     -webkit-animation-name: fadeIn;
@@ -124,7 +130,7 @@ form {
 
     label {
         color: $color3;
-        font-size: 20px;
+        font-size: toRem(20);
         font-weight: 400;
     }
 }
@@ -135,15 +141,15 @@ h3 {
 }
 
 li {
-    font-size: 25px;
+    font-size: toRem(25);
 }
 
 #centro {
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    padding-bottom: 50px;
+    margin-left: toRem(100);
+    margin-right: toRem(100);
+    margin-top: toRem(15);
+    margin-bottom: toRem(20);
+    padding-bottom: toRem(50);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -155,15 +161,15 @@ li {
 }
 
 .mapa {
-    margin-left: 450px;
+    margin-left: toRem(450);
     position: sticky;
     display: block;
     margin: auto;
     transition: 1s;
     &:hover {
-        width: 550px;
-        height: 550px;
-        border-radius: 50px;
+        width: toRem(550);
+        height: toRem(550);
+        border-radius: toRem(50);
     }
     
 }
@@ -251,9 +257,9 @@ a {
 }
 
 div {
-    padding-left: 2px;
-    padding-right: 5px;
-    padding-bottom: 5px;
+    padding-left: toRem(2);
+    padding-right: toRem(5);
+    padding-bottom: toRem(5);
     border-style: hidden;
     border-width: 5px;
     overflow: hidden;
@@ -263,9 +269,9 @@ div {
 
 .contacto {
     display: flex;
-    padding-top: 10px;
-    padding-bottom: 50px;
-    margin-top: 5px;
+    padding-top: toRem(10);
+    padding-bottom: toRem(50);
+    margin-top: toRem(5);
     justify-content: center;
 }
 
@@ -278,22 +284,22 @@ div {
         "servicioC precioC1 precioC2 precioC3";
     grid-template-rows: 50px 50px 50px 50px;
     grid-template-columns: 10% 10% 10% 10%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: toRem(20);
+    padding-bottom: toRem(20);
     justify-content: center;
-    grid-column-gap: 55px;
-    grid-row-gap: 25px;
-    padding-left: 25px;
-    margin-left: 25px;
+    grid-column-gap: toRem(55);
+    grid-row-gap: toRem(25);
+    padding-left: toRem(25);
+    margin-left: toRem(25);
 }
 
 .bordeServicios {
     margin {
-        bottom: 50px;
-        left: 50px;
-        right: 50px;
+        bottom: toRem(50);
+        left: toRem(50);
+        right: toRem(50);
     }
-    padding-bottom: 20px;
+    padding-bottom: toRem(20);
 }
 
 .espacioVacio{
@@ -370,7 +376,7 @@ div {
 .iconos {
     display: flex;
     flex-direction: row;
-    padding-right: 10px;
-    margin: 5px;
+    padding-right: toRem(10);
+    margin: toRem(5);
     justify-content: right;
 }
