@@ -2,17 +2,29 @@ body {
   background-color: black;
   background-image: url("img/fondo.svg");
   color: tomato;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   font-family: "Nunito", sans-serif;
 }
 
 body h1 {
-  font-size: 300%;
+  padding-left: 0.3125rem;
+  font-size: 200%;
 }
 
 header {
-  margin-top: 2.1875rem;
-  margin-left: 1.875rem;
-  padding-left: 3.125rem;
+  margin-top: 1rem;
+  padding-left: 0.3125rem;
+}
+
+header .header__logo {
+  width: 31.25rem;
+  height: 3.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 section {
@@ -37,6 +49,7 @@ p {
   font-weight: 1200/2;
   border-top: 1px solid tomato;
   border-bottom: 1px solid tomato;
+  margin-top: 0.9375rem;
   margin-bottom: 2.8125rem;
 }
 

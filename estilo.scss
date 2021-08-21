@@ -16,18 +16,28 @@ body {
     background-color: $color1;
     background-image: $imagenDeFondo; 
     color: $color2;
+    margin: {
+        right: toRem(16);
+        left: toRem(16);
+        top:toRem(8);
+        bottom: toRem(8);
+    }
     font-family: $fonts;
     h1 {
-        font-size: 300%;
+        padding-left: toRem(5);
+        font-size: 200%;
     }
 }
 
 
 header {
-    margin-top: toRem(35);
-    margin-left: toRem(30);
-    padding-left: toRem(50);
-    
+    margin-top: toRem(16);
+    padding-left: toRem(5);
+    .header__logo {
+        width: toRem(500);
+        height: toRem(50);
+        display: flex;
+    }
 }
 
 section {
@@ -51,7 +61,10 @@ p {
     font-weight: 1200/2;
     border-top: 1px solid $color2;
     border-bottom: 1px solid $color2;
-    margin-bottom: toRem(45);
+    margin: {
+        top: toRem(15);
+        bottom: toRem(45);
+    }
     
 
     ul {
