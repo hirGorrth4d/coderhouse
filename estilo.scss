@@ -17,8 +17,8 @@ body {
     background-image: $imagenDeFondo; 
     color: $color2;
     margin: {
-        right: toRem(16);
-        left: toRem(16);
+        right: toRem(32);
+        left: toRem(32);
         top:toRem(8);
         bottom: toRem(8);
     }
@@ -30,7 +30,7 @@ body {
 }
 
 
-header {
+/*header {
     margin-top: toRem(16);
     padding-left: toRem(5);
     .header__logo {
@@ -38,6 +38,49 @@ header {
         height: toRem(50);
         display: flex;
     }
+}
+*/
+.header__principal {
+    margin: {
+        top: toRem(16);
+        bottom: toRem(50);
+    }
+    padding: {
+        left: toRem(5);
+        right: toRem(10);
+    }
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+    .header__logo {
+        width: toRem(500);
+        height: toRem(50);
+        padding: {
+            left: toRem(5);
+            right: toRem(5);
+        }
+        .header__logo_img {
+            padding-right: toRem(10);
+            width: toRem(30);
+            height: toRem(30);
+        }
+        margin: {
+            right: toRem(10);
+        }
+    }
+    .header__nav {
+        width: toRem(1000);
+        display: flex;
+        padding-right: toRem(5);
+        justify-content: flex-end;
+        align-items: center;
+        a {
+            padding-right: toRem(50);
+
+        }
+    }
+
 }
 
 section {
@@ -56,15 +99,15 @@ p {
     text-align: center;
 }
 
-.alineacionnav {
-    font-size: 50px - 20px;
-    font-weight: 1200/2;
-    border-top: 1px solid $color2;
-    border-bottom: 1px solid $color2;
-    margin: {
-        top: toRem(15);
-        bottom: toRem(45);
-    }
+// .alineacionnav {
+//     font-size: 50px - 20px;
+//     font-weight: 1200/2;
+//     border-top: 1px solid $color2;
+//     border-bottom: 1px solid $color2;
+//     margin: {
+//         top: toRem(15);
+//         bottom: toRem(45);
+//     }
     
 
     ul {
@@ -79,8 +122,6 @@ p {
         display: flex;
         text-align: center;
         padding: toRem(25);
-        
-    }
 }
 
 ul {
@@ -113,24 +154,27 @@ ul {
     0% {opacity: 0;}
     100% {opacity: 1;}
     } 
-.alineacionfooter {
-    margin-top: 35px;
-    padding-top: 100px;
-    border-top: 1px solid $color2;
-    display: flex;
-    justify-content: flex-end;
-    ul {
-        list-style-type: none;
-        display: flex;
-        flex-direction: row;
-    }
+// .alineacionfooter {
+//     margin-top: toRem(16);
+//     padding-top: toRem(50);
 
-    li {
-        padding-left: 10px;
-        margin-right: 100px;
-        margin-bottom: 50px; 
-    }
-}
+//     border-top: 1px solid $color2;
+//     display: flex;
+//     justify-content: center;
+//     align-content: flex-end;
+//     align-items: center;
+//     ul {
+//         list-style-type: none;
+//         display: flex;
+//         flex-direction: row;
+//     }
+
+//     li {
+//         padding-left: 10px;
+//         margin-right: 100px;
+//         margin-bottom: 50px; 
+//     }
+// }
 
 form {
     text-align: center;
@@ -386,10 +430,23 @@ div {
     text-align: center;
 } 
 
-.iconos {
-    display: flex;
-    flex-direction: row;
-    padding-right: toRem(10);
-    margin: toRem(5);
-    justify-content: right;
+.footer__principal {
+    margin: {
+        top: toRem(16);
+        bottom: toRem(16);
+    }
+
+    .footer__iconos {
+        display: flex;
+        flex-direction: row;
+        padding-right: toRem(10);
+        padding-left: toRem(10);
+        margin: toRem(5);
+        justify-content: center;
+        align-content: flex-end;
+        align-items: flex-end;
+        a {
+            padding-right: toRem(24);
+        }
+    }
 }
