@@ -1,12 +1,11 @@
 body {
-  background-color: black;
-  background-image: url("img/fondo.svg");
-  color: tomato;
+  background-color: white;
+  color: black;
   margin-right: 2rem;
   margin-left: 2rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body h1 {
@@ -37,10 +36,11 @@ body h1 {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
+  height: 3.4375rem;
 }
 
 .header__principal .header__logo {
-  width: 31.25rem;
+  width: 50%;
   height: 3.125rem;
   padding-left: 0.3125rem;
   padding-right: 0.3125rem;
@@ -49,12 +49,12 @@ body h1 {
 
 .header__principal .header__logo .header__logo_img {
   padding-right: 0.625rem;
-  width: 1.875rem;
-  height: 1.875rem;
+  width: 3.125rem;
+  height: 3.125rem;
 }
 
 .header__principal .header__nav {
-  width: 62.5rem;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,30 +84,8 @@ h2 {
 
 p {
   font-size: 1.25rem;
-  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
-}
-
-ul {
-  list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  padding: 1.5625rem;
 }
 
 ul {
@@ -159,23 +137,26 @@ ul {
 
 form {
   text-align: center;
-  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 200;
   padding-right: 300px;
   padding-left: 300px;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-top: 3.125rem;
+  margin-left: 6.25rem;
+  margin-right: 6.25rem;
+  margin-bottom: 6.25rem;
 }
 
 form label {
-  color: white;
+  color: black;
   font-size: 1.25rem;
   font-weight: 400;
 }
 
 h3 {
   text-align: center;
-  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
 li {
@@ -185,8 +166,8 @@ li {
 #centro {
   margin-left: 6.25rem;
   margin-right: 6.25rem;
-  margin-top: 0.9375rem;
-  margin-bottom: 1.25rem;
+  margin-top: 3.125rem;
+  margin-bottom: 3.125rem;
   padding-bottom: 3.125rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -202,7 +183,7 @@ li {
 }
 
 #galeriaImagen {
-  border-bottom: 1px solid tomato;
+  border-bottom: 1px solid black;
 }
 
 .mapa {
@@ -497,5 +478,78 @@ div {
 
 .footer__principal .footer__iconos a {
   padding-right: 1.5rem;
+}
+
+.section__nosotros_fundador {
+  padding-top: 0.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section__nosotros_fundador .section__nosotros_fundador_img {
+  border-radius: 150px;
+  margin-top: 1.5625rem;
+  margin-bottom: 2.1875rem;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: 150ms;
+  transition: 150ms;
+}
+
+.section__nosotros_fundador .section__nosotros_fundador_img:hover {
+  -webkit-filter: none;
+          filter: none;
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+  -webkit-box-shadow: 300ms linear 0ms, z-index 300ms linear 0ms;
+          box-shadow: 300ms linear 0ms, z-index 300ms linear 0ms;
+}
+
+.section__nosotros {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-bottom: 3.125rem;
+  margin-top: 1.5625rem;
+}
+
+.section__nosotros .section__nosotros_user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section__nosotros .section__nosotros_user_img {
+  border-radius: 150px;
+  margin-top: 0.9375rem;
+  margin-bottom: 0.9375rem;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.section__nosotros .section__nosotros_user_img:hover {
+  -webkit-filter: none;
+          filter: none;
 }
 /*# sourceMappingURL=estilo.css.map */
