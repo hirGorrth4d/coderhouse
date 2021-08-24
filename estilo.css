@@ -159,6 +159,13 @@ h3 {
   font-weight: 300;
 }
 
+h4 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 125%;
+}
+
 li {
   font-size: 1.5625rem;
 }
@@ -187,11 +194,8 @@ li {
 }
 
 .mapa {
-  margin-left: 28.125rem;
-  position: -webkit-sticky;
-  position: sticky;
-  display: block;
-  margin: auto;
+  margin-top: 3.125rem;
+  margin-bottom: 1.5625rem;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -200,6 +204,19 @@ li {
   width: 34.375rem;
   height: 34.375rem;
   border-radius: 3.125rem;
+}
+
+.direccion__mapa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 a {
@@ -326,7 +343,9 @@ div {
   grid-column-gap: 3.4375rem;
   grid-row-gap: 1.5625rem;
   padding-left: 1.5625rem;
+  margin-top: 1.5625rem;
   margin-left: 1.5625rem;
+  margin-bottom: 3.125rem;
 }
 
 .bordeServicios {
@@ -523,7 +542,7 @@ div {
           flex-direction: row;
   -ms-flex-line-pack: center;
       align-content: center;
-  margin-bottom: 3.125rem;
+  margin-bottom: 4.6875rem;
   margin-top: 1.5625rem;
 }
 
@@ -546,10 +565,33 @@ div {
   margin-bottom: 0.9375rem;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+  -webkit-transition: 250ms;
+  transition: 250ms;
 }
 
 .section__nosotros .section__nosotros_user_img:hover {
   -webkit-filter: none;
           filter: none;
+}
+
+.servicios__video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3.125rem;
+  margin-top: 1.5625rem;
+  padding-top: 0.9375rem;
+  padding-bottom: 1.5625rem;
+}
+
+.servicios__video .video {
+  margin: 1.5625rem;
 }
 /*# sourceMappingURL=estilo.css.map */
