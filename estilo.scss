@@ -1,8 +1,8 @@
 $color1: white;
 $color2: black;
-$colordeprueba: #BEA4D2;
-$color3: black;
-$color4: gray;
+$color3: #74888825;
+$color4: #caeded25;
+$color5: gray;
 $fonts: 'Roboto', sans-serif;
 $margen: 600px / 2;
 $imagenDeFondo: url("img/fondo.svg");
@@ -54,6 +54,7 @@ body {
     flex-direction: row;
     width: 100%;
     height: toRem(55);
+    box-shadow: 1px 1px 10px $color4;
     
     .header__logo {
         width: 50%;
@@ -70,6 +71,13 @@ body {
         margin: {
             right: toRem(10);
         }
+        a {
+            transition: 300ms;
+            &:hover {
+                color: $color2;
+                transform: scale(1.1,1.2);
+            }
+        }
     }
     .header__nav {
         width: 50%;
@@ -82,7 +90,132 @@ body {
 
         }
     }
+}
 
+@media screen and (max-width: 680px) {
+    body {
+        margin: {
+            right: toRem(8);
+            left: toRem(8);
+            top:toRem(8);
+            bottom: toRem(8);
+        }
+        
+    }
+    .header__principal {
+        margin: {
+            top: toRem(16);
+            bottom: toRem(50);
+        }
+        padding: {
+            left: toRem(5);
+            right: toRem(8);
+        }
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: toRem(100);
+        
+        .header__logo {
+            width: 100%;
+            height: toRem(100);
+            padding: {
+                left: toRem(5);
+                right: toRem(5);
+            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .header__logo_img {
+                padding-right: toRem(10);
+                width: toRem(32);
+                height: toRem(32);
+            }
+            margin: {
+                right: toRem(5);
+            }
+        }
+        .header__nav {
+            width: 100%;
+            display: flex;
+            padding-right: toRem(2);
+            justify-content: center;
+            align-items: center;
+            a {
+                padding-right: toRem(15);
+    
+            }
+        }
+    }
+
+    .imagen {
+        width: toRem(300);
+        height: toRem(300);
+    }
+   
+    #centro {
+        h2 {
+            font-size: toRem(20);
+        }
+        p {
+            font-size: toRem(15);
+        }
+        li{
+            font-size: toRem(15);
+        }
+        margin-bottom: toRem(25) !important;
+        padding-bottom:toRem(25) !important;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        font-family: $fonts;
+        font-weight: 100;
+        padding: 5px;
+    
+        label {
+            color: $color3;
+            font-size: toRem(5);
+            font-weight: 400;
+        }
+    }
+
+    .video{
+
+        width: 350px;
+        height: 260px;
+    }
+    #grilla {
+        width: 100% !important;
+        margin: {
+           left: 0px !important;
+           bottom: toRem(25);
+        }
+        padding: { 
+            left: 0px !important;
+            bottom: toRem(25) !important;
+            top: toRem(25);
+        }
+    }
+    .section__nosotros_fundador_img {
+        width: toRem(200);
+        height: toRem(200);
+    }
+    .section__nosotros_user_img {
+        width: toRem(150);
+        height: toRem(150);
+    }
+    .mapa {
+        transition: 1s;
+        &:hover {
+            width: toRem(350) !important;
+            height: toRem(350) !important;
+            border-radius: toRem(100);
+        }
+        
+    }
 }
 
 section {
@@ -182,14 +315,8 @@ form {
     text-align: center;
     font-family: $fonts;
     font-weight: 200;
-    padding-right: $margen;
-    padding-left: $margen;
-    margin: {
-        top:toRem(50);
-        left: toRem(100);
-        right: toRem(100);
-        bottom: toRem(100);
-    }
+    width: 70%;
+    margin: auto;
 
     label {
         color: $color3;
@@ -255,83 +382,11 @@ li {
 a {
     text-decoration: none;
     color: inherit;
+    transition: 300ms;
     &:hover {
-        color: $color4;
-        -webkit-animation-name: bounceIn;
-        animation-name: bounceIn;
-        -webkit-animation-duration: .75s;
-        animation-duration: .75s;
-        -webkit-animation-duration: 1s;
-        animation-duration: 1s;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
-        }
-        @-webkit-keyframes bounceIn {
-        0%, 20%, 40%, 60%, 80%, 100% {
-        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-        }
-        0% {
-        opacity: 0;
-        -webkit-transform: scale3d(.3, .3, .3);
-        transform: scale3d(.3, .3, .3);
-        }
-        20% {
-        -webkit-transform: scale3d(1.1, 1.1, 1.1);
-        transform: scale3d(1.1, 1.1, 1.1);
-        }
-        40% {
-        -webkit-transform: scale3d(.9, .9, .9);
-        transform: scale3d(.9, .9, .9);
-        }
-        60% {
-        opacity: 1;
-        -webkit-transform: scale3d(1.03, 1.03, 1.03);
-        transform: scale3d(1.03, 1.03, 1.03);
-        }
-        80% {
-        -webkit-transform: scale3d(.97, .97, .97);
-        transform: scale3d(.97, .97, .97);
-        }
-        100% {
-        opacity: 1;
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-        }
-        }
-        @keyframes bounceIn {
-        0%, 20%, 40%, 60%, 80%, 100% {
-        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-        }
-        0% {
-        opacity: 0;
-        -webkit-transform: scale3d(.3, .3, .3);
-        transform: scale3d(.3, .3, .3);
-        }
-        20% {
-        -webkit-transform: scale3d(1.1, 1.1, 1.1);
-        transform: scale3d(1.1, 1.1, 1.1);
-        }
-        40% {
-        -webkit-transform: scale3d(.9, .9, .9);
-        transform: scale3d(.9, .9, .9);
-        }
-        60% {
-        opacity: 1;
-        -webkit-transform: scale3d(1.03, 1.03, 1.03);
-        transform: scale3d(1.03, 1.03, 1.03);
-        }
-        80% {
-        -webkit-transform: scale3d(.97, .97, .97);
-        transform: scale3d(.97, .97, .97);
-        }
-        100% {
-        opacity: 1;
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-        }
-        }
+        color: $color5;
+        transform: scale(1.1,1.1);
+    }
 }
 
 div {
@@ -361,18 +416,25 @@ div {
         "servicioB precioB1 precioB2 precioB3"
         "servicioC precioC1 precioC2 precioC3";
     grid-template-rows: 50px 50px 50px 50px;
-    grid-template-columns: 10% 10% 10% 10%;
+    grid-template-columns: 10% 25% 25% 25%;
     padding-top: toRem(20);
     padding-bottom: toRem(20);
     justify-content: center;
     grid-column-gap: toRem(55);
     grid-row-gap: toRem(25);
     padding-left: toRem(25);
+    padding-right: toRem(25);
     margin: {
         top: toRem(25);
-        left: toRem(25);
+        
         bottom: toRem(50);
+        right: toRem(25);
     }
+    background-color: $color4;
+    color: $color2;
+    border-radius: toRem(50);
+    width: 100%;
+    box-shadow: -1px 15px 10px $color3;
 }
 
 .bordeServicios {
@@ -382,6 +444,7 @@ div {
         right: toRem(50);
     }
     padding-bottom: toRem(20);
+    
 }
 
 .espacioVacio{
