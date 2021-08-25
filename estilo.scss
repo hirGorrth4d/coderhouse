@@ -86,7 +86,7 @@ body {
         justify-content: flex-end;
         align-items: center;
         a {
-            padding-right: toRem(50);
+            padding-right: toRem(25);
 
         }
     }
@@ -142,7 +142,7 @@ body {
             justify-content: center;
             align-items: center;
             a {
-                padding-right: toRem(15);
+                padding-right: toRem(10);
     
             }
         }
@@ -152,7 +152,6 @@ body {
         width: toRem(300);
         height: toRem(300);
     }
-   
     #centro {
         h2 {
             font-size: toRem(20);
@@ -189,6 +188,8 @@ body {
     }
     #grilla {
         width: 100% !important;
+        grid-template-rows: 50px 50px 75px 75px !important;
+        grid-template-columns: 15% 15% 15% 15% !important;
         margin: {
            left: 0px !important;
            bottom: toRem(25);
@@ -319,7 +320,7 @@ form {
     margin: auto;
 
     label {
-        color: $color3;
+        color: $color2;
         font-size: toRem(20);
         font-weight: 400;
     }

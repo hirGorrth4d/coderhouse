@@ -81,7 +81,7 @@ body h1 {
 }
 
 .header__principal .header__nav a {
-  padding-right: 3.125rem;
+  padding-right: 1.5625rem;
 }
 
 @media screen and (max-width: 680px) {
@@ -141,7 +141,7 @@ body h1 {
             align-items: center;
   }
   .header__principal .header__nav a {
-    padding-right: 0.9375rem;
+    padding-right: 0.625rem;
   }
   .imagen {
     width: 18.75rem;
@@ -187,6 +187,10 @@ body h1 {
   }
   #grilla {
     width: 100% !important;
+    -ms-grid-rows: 50px 50px 75px 75px !important;
+        grid-template-rows: 50px 50px 75px 75px !important;
+    -ms-grid-columns: 15% 15% 15% 15% !important;
+        grid-template-columns: 15% 15% 15% 15% !important;
     margin-left: 0px !important;
     margin-bottom: 1.5625rem;
     padding-left: 0px !important;
@@ -285,7 +289,7 @@ form {
 }
 
 form label {
-  color: #74888825;
+  color: black;
   font-size: 1.25rem;
   font-weight: 400;
 }
