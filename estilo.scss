@@ -604,3 +604,48 @@ div {
         margin: toRem(25);
     }
 }
+
+#form-pedidos {
+    margin: {
+        top: toRem(16);
+        bottom: toRem(16);
+    }
+    padding: toRem(25);
+    
+    .form-pedidos-inputs {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        align-items: center;
+        input[type='number'] {
+            appearance: none;
+        }
+        .btn {
+            margin: {
+                top:toRem(15);
+                bottom: toRem(15);
+            }
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            border-radius: 10%;
+            box-shadow: 2px 4px 15px;
+            background-color: $color3;
+        }
+        #t-servicio {
+            border: 1px solid gray;
+            box-shadow: 1px 1px 5px;
+        }
+        #cantUni {
+            
+            border: 1px solid gray;
+            box-shadow: 1px 1px 5px;
+            
+        }
+        #funCalculo {
+            
+            border: 1px solid gray;
+            box-shadow: 1px 1px 5px;
+        }
+    }
+}

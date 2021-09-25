@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manipulando el DOM</title>
+</head>
+<body>
+
+    <div id="form-pedidos">
+        <div class="form-pedidos-titulo">
+        <h2>Calcula el valor de tu pedido </h2></div>
+        <h3>Tipos de servicio a elegir</h3>
+        <ul>
+            <li>Color Base</li>
+            <li>Lijado y sin pintar</li>
+            <li>Pintado Completo</li>
+        </ul>
+        <form class="form-pedidos-inputs">
+            <label for="tipo de servicio">Tipo de servicio</label>
+            <input type="text" id="t-servicio">
+            <label for="cantidad de unidades">Cantidad de unidades</label>
+            <input type="number" id="cantUni">
+            
+            <button id="btnCalcular" class="btn">Calcular</button>
+
+            <label for="resultado">Resultado</label>
+            <input type="text" id="funCalculo">
+        </form>
+    <script src="dom.js"></script>
+</body>
+</html>

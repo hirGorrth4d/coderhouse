@@ -670,4 +670,64 @@ div {
 .servicios__video .video {
   margin: 1.5625rem;
 }
+
+#form-pedidos {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1.5625rem;
+}
+
+#form-pedidos .form-pedidos-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#form-pedidos .form-pedidos-inputs input[type='number'] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+#form-pedidos .form-pedidos-inputs .btn {
+  margin-top: 0.9375rem;
+  margin-bottom: 0.9375rem;
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10%;
+  -webkit-box-shadow: 2px 4px 15px;
+          box-shadow: 2px 4px 15px;
+  background-color: #74888825;
+}
+
+#form-pedidos .form-pedidos-inputs #t-servicio {
+  border: 1px solid gray;
+  -webkit-box-shadow: 1px 1px 5px;
+          box-shadow: 1px 1px 5px;
+}
+
+#form-pedidos .form-pedidos-inputs #cantUni {
+  border: 1px solid gray;
+  -webkit-box-shadow: 1px 1px 5px;
+          box-shadow: 1px 1px 5px;
+}
+
+#form-pedidos .form-pedidos-inputs #funCalculo {
+  border: 1px solid gray;
+  -webkit-box-shadow: 1px 1px 5px;
+          box-shadow: 1px 1px 5px;
+}
 /*# sourceMappingURL=estilo.css.map */
