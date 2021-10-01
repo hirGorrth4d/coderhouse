@@ -19,8 +19,13 @@
             <li>Pintado Completo</li>
         </ul>
         <form class="form-pedidos-inputs">
-            <label for="tipo de servicio">Tipo de servicio</label>
-            <input type="text" id="t-servicio">
+            <!-- <label for="tipo de servicio">Tipo de servicio</label>
+            <input type="text" id="t-servicio"> -->
+            <select name="Servicio" id="t-servicio">
+                <option value="Color base">Color Base</option>
+                <option value="Lijado y sin pintar">Lijado y sin Pintar</option>
+                <option value="Pintado completo">Pintado Completo</option>
+            </select>
             <label for="cantidad de unidades">Cantidad de unidades</label>
             <input type="number" id="cantUni">
             
@@ -30,6 +35,6 @@
             <input type="text" id="funCalculo">
         </form>
     </div>
-    <script src="dom.js"></script>
+    <script src="storage.js"></script>
 </body>
 </html>
