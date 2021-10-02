@@ -677,6 +677,45 @@ div {
   padding: 1.5625rem;
 }
 
+#form-pedidos h2 {
+  font-size: 200%;
+}
+
+#form-pedidos label {
+  font-size: 150%;
+  margin: 5px;
+  padding: 5px;
+}
+
+#form-pedidos button {
+  color: white;
+  -webkit-box-shadow: 5px 5px 20px gray;
+          box-shadow: 5px 5px 20px gray;
+}
+
+#form-pedidos .selectivo {
+  width: 40%;
+  height: 50%;
+  font-size: 150%;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+#form-pedidos .selectivo option {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#form-pedidos .numero {
+  width: 40%;
+  height: 60%;
+  font-size: 150%;
+  margin: 5px;
+  padding: 5px;
+}
+
 #form-pedidos .form-pedidos-inputs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -686,6 +725,7 @@ div {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 30%;
+  height: 50%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -698,19 +738,18 @@ div {
 }
 
 #form-pedidos .form-pedidos-inputs .btn {
-  margin-top: 0.9375rem;
+  margin-top: 1.5625rem;
   margin-bottom: 0.9375rem;
-  width: 25%;
+  width: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 10%;
-  -webkit-box-shadow: 2px 4px 15px;
-          box-shadow: 2px 4px 15px;
-  background-color: #74888825;
+  border-radius: 10px;
+  background-color: #025F69;
+  font-size: 140%;
 }
 
 #form-pedidos .form-pedidos-inputs #t-servicio {
@@ -725,9 +764,8 @@ div {
           box-shadow: 1px 1px 5px;
 }
 
-#form-pedidos .form-pedidos-inputs #funCalculo {
-  border: 1px solid gray;
-  -webkit-box-shadow: 1px 1px 5px;
-          box-shadow: 1px 1px 5px;
+#final {
+  margin-top: 35px;
+  font-size: 160%;
 }
 /*# sourceMappingURL=estilo.css.map */

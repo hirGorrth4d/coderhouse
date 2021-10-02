@@ -3,6 +3,7 @@ $color2: black;
 $color3: #74888825;
 $color4: #caeded25;
 $color5: gray;
+$color6: #025F69;
 $fonts: 'Roboto', sans-serif;
 $margen: 600px / 2;
 $imagenDeFondo: url("img/fondo.svg");
@@ -611,26 +612,58 @@ div {
         bottom: toRem(16);
     }
     padding: toRem(25);
-    
+    h2{
+        font-size: 200%;
+    }
+    label {
+        font-size: 150%;
+        margin: 5px;
+        padding: 5px;
+    }
+    button {
+        color: white;
+        box-shadow: 5px 5px 20px gray;
+    }
+    .selectivo{
+        width: 40%;
+        height: 50%;
+        font-size: 150%;
+        padding: 5px;
+        margin: 5px;
+        option {
+            align-items: center;
+        }
+        border-radius: 10px;
+    }
+    .numero {
+        width: 40%;
+        height: 60%;
+        font-size: 150%;
+        margin: 5px;
+        padding: 5px;
+    }
     .form-pedidos-inputs {
         display: flex;
         flex-direction: column;
         width: 30%;
+        height: 50%;
         align-items: center;
         input[type='number'] {
             appearance: none;
         }
+        
         .btn {
             margin: {
-                top:toRem(15);
+                top:toRem(25);
                 bottom: toRem(15);
             }
-            width: 25%;
+            width: 35%;
             display: flex;
             justify-content: center;
-            border-radius: 10%;
-            box-shadow: 2px 4px 15px;
-            background-color: $color3;
+            border-radius: 10px;
+            
+            background-color: $color6;
+            font-size: 140%;
         }
         #t-servicio {
             border: 1px solid gray;
@@ -642,10 +675,10 @@ div {
             box-shadow: 1px 1px 5px;
             
         }
-        #funCalculo {
-            
-            border: 1px solid gray;
-            box-shadow: 1px 1px 5px;
-        }
     }
+}
+
+#final{
+    margin-top: 35px;
+    font-size: 160%;
 }

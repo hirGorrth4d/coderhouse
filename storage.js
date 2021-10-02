@@ -29,27 +29,35 @@ sesionGuardada ("Servicios", JSON.stringify(productos));
 
 let boton = document.getElementById("btnCalcular");
 boton.addEventListener("click", solicitarDatos);
+let btnLimpiar = document.getElementById("btnLimpiar");
+btnLimpiar.parentNode.removeChild(contenedor);
 
 function solicitarDatos (e) {
     e.preventDefault();
     let tipoServicio = document.getElementById("t-servicio").value;
     let cantidadUnidades = document.getElementById("cantUni").value;
-    let resultado =document.getElementById("funCalculo");
+
+    let contenedor = document.createElement("div");
 
     let busqueda = productos.filter(x => x.tipo == tipoServicio.toUpperCase())[0]
-
+    
     if (cantidadUnidades <= 5){
-        resultado.value = busqueda.precio*cantidadUnidades;
-        alert("El servicio te vale: " + resultado.value);
+        let resultado = busqueda.precio*cantidadUnidades;
+        // resultado.value = busqueda.precio*cantidadUnidades;
+        contenedor.innerHTML=`<h3> El servicio te vale: ${resultado} </h3>`;
+        document.body.appendChild(contenedor);
     } else if ((cantidadUnidades >=5) && (cantidadUnidades<=50)) {
-        resultado.value =(busqueda.descuento5unidades())*cantidadUnidades;
-        alert("El servicio te vale: " + resultado.value);
+        let resultado =(busqueda.descuento5unidades())*cantidadUnidades;
+        contenedor.innerHTML=`<h3> El servicio te vale: ${resultado} </h3>`;
+        document.body.appendChild(contenedor);
     } else if (cantidadUnidades>=50) {
-        resultado.value = (busqueda.descuentoMuchasUnidades())*cantidadUnidades;
-        alert("El servicio te vale: " + resultado.value);
+        let resultado = (busqueda.descuentoMuchasUnidades())*cantidadUnidades;
+        contenedor.innerHTML=`<h3> El servicio te vale: ${resultado} </h3>`;
+        document.body.appendChild(contenedor);
     } else {
-        resultado.value = "No ingresaste valor adecuado";
-        alert("No ingresaste valor adecuado");
+        
+        
     }
     console.log(busqueda)
+
 }

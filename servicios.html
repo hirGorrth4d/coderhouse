@@ -66,11 +66,11 @@
         <div class="precioA2"> $100 </div>
         <div class="precioA3"> $50 </div>
         <div class="precioB1"> $600 </div>
-        <div class="precioB2"> $500 </div>   
-        <div class="precioB3"> $300 </div>
+        <div class="precioB2"> $200 </div>   
+        <div class="precioB3"> $150 </div>
         <div class="precioC1"> $1000 </div>
-        <div class="precioC2"> $800 </div>
-        <div class="precioC3"> $700 </div>
+        <div class="precioC2"> $600 </div>
+        <div class="precioC3"> $550 </div>
         
     </section>
     <div id="form-pedidos">
@@ -78,15 +78,22 @@
         <h2>Calcula el valor de tu pedido </h2></div>
 
         <form class="form-pedidos-inputs">
-            <label for="tipo de servicio">Tipo de servicio</label>
-            <input type="text" id="t-servicio">
+            <!-- <label for="tipo de servicio">Tipo de servicio</label>
+            <input type="text" id="t-servicio"> -->
+            <select name="Servicio" id="t-servicio" class="selectivo">
+                <option value="Color base">Color Base</option>
+                <option value="Lijado y sin pintar">Lijado y sin Pintar</option>
+                <option value="Pintado completo">Pintado Completo</option>
+            </select>
             <label for="cantidad de unidades">Cantidad de unidades</label>
-            <input type="number" id="cantUni">
+            <input type="number" id="cantUni" class="numero">
             
             <button id="btnCalcular" class="btn">Calcular</button>
+            <button id="btnLimpiar" class="btn">Limpiar resultado</button>
 
-            <label for="resultado">Resultado</label>
-            <input type="text" id="funCalculo">
+            <!-- <label for="resultado">El servicio te vale: </label>
+            <input type="text" id="funCalculo"> -->
+            <div id="final"></div>
         </form>
     </div>
     <div><h4>Preguntanos por Whatsapp por otros precios</h4></div>
