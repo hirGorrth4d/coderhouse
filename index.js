@@ -14,6 +14,14 @@ class producto {
 
 }
 
+// const descuentos = function (cantidadUnidades) {
+//     if(cantidadUnidades > 5) {
+//         this.precio -= 400;
+// } else if (cantidadUnidades >= 50){
+//     this.precio -= 450;
+// }
+// }
+
 const productos = [];
 productos.push (new producto("1","COLOR BASE", "500"));
 productos.push (new producto ("2", "LIJADO Y SIN PINTAR", "600"));
@@ -40,19 +48,19 @@ function solicitarDatos (e) {
     e.preventDefault();
     let tipoServicio = document.getElementById("t-servicio").value;
     let cantidadUnidades = document.getElementById("cantUni").value;
-    let busqueda = productos.filter(x => x.tipo == tipoServicio.toUpperCase())[0]
+    let busqueda = productos.filter(x => x.tipo == tipoServicio.toUpperCase())[0];
     
-    if (cantidadUnidades <= 5){
+    if (cantidadUnidades < 6){
         let resultado = busqueda.precio*cantidadUnidades;
         // resultado.value = busqueda.precio*cantidadUnidades;
         contenedor.innerHTML=`<h3> El servicio te vale $ ${resultado} </h3>`;
         final.appendChild(contenedor);
         
-    } else if ((cantidadUnidades >=5) && (cantidadUnidades<=50)) {
+    } else if ((cantidadUnidades > 5) && (cantidadUnidades< 51)) {
         let resultado =(busqueda.descuento5unidades())*cantidadUnidades;
         contenedor.innerHTML=`<h3> El servicio te vale $ ${resultado} </h3>`;
         final.appendChild(contenedor);
-    } else if (cantidadUnidades>=50) {
+    } else if (cantidadUnidades> 50) {
         let resultado = (busqueda.descuentoMuchasUnidades())*cantidadUnidades;
         contenedor.innerHTML=`<h3> El servicio te vale $ ${resultado} </h3>`;
         final.appendChild(contenedor);

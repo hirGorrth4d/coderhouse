@@ -11,35 +11,29 @@
 
     <div id="form-pedidos">
         <div class="form-pedidos-titulo">
-        <h2>Calcula el valor de tu pedido </h2></div>
-        <h3>Tipos de servicio a elegir</h3>
-        <ul>
-            <li>Color Base</li>
-            <li>Lijado y sin pintar</li>
-            <li>Pintado Completo</li>
-        </ul>
+            <button class="btn" id="btnPrincipal">Calcula el valor de tu pedido</button>
 
-        <button id="open">
-            Calcular
-        </button>
-        <div class="modal-container"></div>
-        <form class="form-pedidos-inputs">
-            <!-- <label for="tipo de servicio">Tipo de servicio</label>
-            <input type="text" id="t-servicio"> -->
-            <select name="Servicio" id="t-servicio">
-                <option value="Color base">Color Base</option>
-                <option value="Lijado y sin pintar">Lijado y sin Pintar</option>
-                <option value="Pintado completo">Pintado Completo</option>
-            </select>
-            <label for="cantidad de unidades">Cantidad de unidades</label>
-            <input type="number" id="cantUni">
-            
-            <button id="btnCalcular" class="btn">Calcular</button>
-            <button id="btnLimpiar">Limpiar resultado</button>
+            <div id="modal"></div>
+                <!-- <div class="modal-container">
+                    <form class="form-pedidos-inputs">
+                        
+                        <select name="Servicio" id="t-servicio">
+                            <option value="Color base">Color Base</option>
+                            <option value="Lijado y sin pintar">Lijado y sin Pintar</option>
+                            <option value="Pintado completo">Pintado Completo</option>
+                        </select>
+                        <label for="cantidad de unidades">Cantidad de unidades</label>
+                        <input type="number" id="cantUni">
+                        
+                        <button id="btnCalcular" class="btn">Calcular</button>
+                        <button id="btnLimpiar">Limpiar resultado</button>
 
-            <!-- <label for="resultado">El servicio te vale: </label>
-            <input type="text" id="funCalculo"> -->
-        </form>
+                        <label for="resultado">El servicio te vale: </label>
+                        <input type="text" id="funCalculo"> 
+                    </form>
+                </div>    -->
+            </div> 
+        </div>
     </div>
     <script src="storage.js"></script>
 </body>
