@@ -32,47 +32,55 @@ const sesionGuardada = (clave, valor) => { localStorage.setItem(clave, valor)};
 // for (const producto of productos) {
 //     sesionGuardada ()
 // }
+$(document).ready(function(){
 
-sesionGuardada ("Servicios", JSON.stringify(productos));
 
-let boton = document.getElementById("btnCalcular");
-boton.addEventListener("click", solicitarDatos);
+    sesionGuardada ("Servicios", JSON.stringify(productos));
 
-let final =document.getElementById("final");
-let contenedor = document.createElement("div");
+    let boton = $("#btnCalcular");
+    // boton.on("click", (solicitarDatos);
+    boton.on("click", solicitarDatos);
 
-let btnLimpiar =document.getElementById("btnLimpiar");
-btnLimpiar.addEventListener("click", borrarContenedor);
+    // let final =$("#final");
+    // let contenedor = $("body").append("div");
 
-function solicitarDatos (e) {
-    e.preventDefault();
-    let tipoServicio = document.getElementById("t-servicio").value;
-    let cantidadUnidades = document.getElementById("cantUni").value;
-    let busqueda = productos.filter(x => x.tipo == tipoServicio.toUpperCase())[0];
-    
-    if (cantidadUnidades < 6){
-        let resultado = busqueda.precio*cantidadUnidades;
-        // resultado.value = busqueda.precio*cantidadUnidades;
-        contenedor.innerHTML=`<h3> El servicio te vale $ ${resultado} </h3>`;
-        final.appendChild(contenedor);
+    let btnLimpiar =$("#btnLimpiar");
+    btnLimpiar.on("click", borrarContenedor);
+
+    function solicitarDatos (e) {
+        e.preventDefault();
+        let tipoServicio = $("#t-servicio").val().toUpperCase();
+        let cantidadUnidades = $("#cantUni").val();
+        let busqueda = productos.filter(x => x.tipo == tipoServicio)[0];
         
-    } else if ((cantidadUnidades > 5) && (cantidadUnidades< 51)) {
-        let resultado =(busqueda.descuento5unidades())*cantidadUnidades;
-        contenedor.innerHTML=`<h3> El servicio te vale $ ${resultado} </h3>`;
-        final.appendChild(contenedor);
-    } else if (cantidadUnidades> 50) {
-        let resultado = (busqueda.descuentoMuchasUnidades())*cantidadUnidades;
-        contenedor.innerHTML=`<h3> El servicio te vale $ ${resultado} </h3>`;
-        final.appendChild(contenedor);
-    } else {
-        resultado = "No ingresaste valor adecuado";
-        
+        if (cantidadUnidades < 6){
+            let resultado = busqueda.precio*cantidadUnidades;
+            // resultado.value = busqueda.precio*cantidadUnidades;
+            // contenedor.innerHTML=`<h3> El servicio te vale $ ${resultado} </h3>`;
+            // final.appendChild(contenedor);
+            // $("#form-pedidos").append(`<h3> El servicio te vale $ ${resultado} </h3>`);
+            $("#final").append(`<h3 id="resultado" class="fadeIn"> El servicio te vale $ ${resultado} </h3>`);
+        } else if ((cantidadUnidades > 5) && (cantidadUnidades< 51)) {
+            let resultado =(busqueda.descuento5unidades())*cantidadUnidades;
+            // contenedor.innerHTML=`<h3> El servicio te vale $ ${resultado} </h3>`;
+            // final.appendChild(contenedor);
+            $("#final").append(`<h3 id="resultado" class="fadeIn"> El servicio te vale $ ${resultado} </h3>`);
+        } else if (cantidadUnidades> 50) {
+            let resultado = (busqueda.descuentoMuchasUnidades())*cantidadUnidades;
+            // contenedor.innerHTML=`<h3> El servicio te vale $ ${resultado} </h3>`;
+            // final.appendChild(contenedor);
+            $("#final").append(`<h3 id="resultado" class="fadeIn"> El servicio te vale $ ${resultado} </h3>`);
+        } else {
+            resultado = "No ingresaste valor adecuado";
+            
+        }
+        console.log(busqueda);
     }
-    console.log(busqueda);
-} 
 
-function borrarContenedor(e){
-    e.preventDefault();
-    document.getElementById("cantUni").value = "";
-    contenedor.remove();
-}
+
+    function borrarContenedor(e){
+        e.preventDefault();
+        $("#cantUni").val("");
+        $("#resultado").remove();
+    }
+});

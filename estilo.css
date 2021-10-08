@@ -694,26 +694,22 @@ div {
 }
 
 #form-pedidos .selectivo {
-  width: 40%;
+  width: 45%;
   height: 50%;
   font-size: 150%;
   padding: 5px;
   margin: 5px;
+  text-align: center;
   border-radius: 10px;
 }
 
-#form-pedidos .selectivo option {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 #form-pedidos .numero {
-  width: 40%;
-  height: 60%;
+  width: 45%;
+  height: 50%;
   font-size: 150%;
   margin: 5px;
   padding: 5px;
+  border-radius: 10px;
 }
 
 #form-pedidos .form-pedidos-inputs {
@@ -740,7 +736,7 @@ div {
 #form-pedidos .form-pedidos-inputs .btn {
   margin-top: 1.5625rem;
   margin-bottom: 0.9375rem;
-  width: 35%;
+  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -625,22 +625,21 @@ div {
         box-shadow: 5px 5px 20px gray;
     }
     .selectivo{
-        width: 40%;
+        width: 45%;
         height: 50%;
         font-size: 150%;
         padding: 5px;
         margin: 5px;
-        option {
-            align-items: center;
-        }
+        text-align: center;
         border-radius: 10px;
     }
     .numero {
-        width: 40%;
-        height: 60%;
+        width: 45%;
+        height: 50%;
         font-size: 150%;
         margin: 5px;
         padding: 5px;
+        border-radius: 10px;
     }
     .form-pedidos-inputs {
         display: flex;
@@ -657,7 +656,7 @@ div {
                 top:toRem(25);
                 bottom: toRem(15);
             }
-            width: 35%;
+            width: 40%;
             display: flex;
             justify-content: center;
             border-radius: 10px;
