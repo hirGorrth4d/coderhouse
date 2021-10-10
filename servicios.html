@@ -73,13 +73,12 @@
         <div class="precioC3"> $550 </div>
         
     </section>
-    <div id="form-pedidos">
+    <!-- <div id="form-pedidos">
         <div class="form-pedidos-titulo">
         <h2>Calcula el valor de tu pedido </h2></div>
 
         <form class="form-pedidos-inputs">
-            <!-- <label for="tipo de servicio">Tipo de servicio</label>
-            <input type="text" id="t-servicio"> -->
+           
             <select name="Servicio" id="t-servicio" class="selectivo">
                 <option value="Color base">Color Base</option>
                 <option value="Lijado y sin pintar">Lijado y sin Pintar</option>
@@ -91,20 +90,52 @@
             <button id="btnCalcular" class="btn">Calcular</button>
             <button id="btnLimpiar" class="btn">Limpiar resultado</button>
 
-            <!-- <label for="resultado">El servicio te vale: </label>
-            <input type="text" id="funCalculo"> -->
+
             <div id="final"></div>
         </form>
+    </div> -->
+    <div class="btn_modal">
+        <button class="btn" id="btnModal">Calcula el valor de tu pedido</button>
     </div>
-    <div><h4>Preguntanos por Whatsapp por otros precios</h4></div>
+    <div id="abrirModal">
+        <div id="modal" class="mdl">
+            <div id="form-pedidos">
+                
+                    <div class="modal_header">
+                        <button id="close_button" class="close_btn">&times;</button>
+                    </div>
+                <h2>Calcula el valor de tu pedido </h2>
+                    
+                <form class="form-pedidos-inputs">
+                    <select name="Servicio" id="t-servicio" class="selectivo">
+                        <option value="Color base">Color Base</option>
+                        <option value="Lijado y sin pintar">Lijado y sin Pintar</option>
+                        <option value="Pintado completo">Pintado Completo</option>
+                    </select>
+                    <label for="cantidad de unidades">Cantidad de unidades</label>
+                    <input type="number" id="cantUni" class="numero">
+                    
+                    <button id="btnCalcular" class="btn">Calcular</button>
+                    <button id="btnLimpiar" class="btn">Limpiar resultado</button>
+                    <div id="final"></div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    <div class="active" id="overlay"></div>
+    <div>
+        <h4>Preguntanos por Whatsapp por otros precios</h4>
+    </div>
     <footer class="footer__principal">
         <div class="footer__iconos">
           <a href="direccion.html"><img src="img/google-maps.png" alt="Direccion" width="24" height="24"></a>
           <a href="https://web.whatsapp.com/" target="_blank"><img src="img/whatsapp.png" alt="telefono" width="24" height="24"></a>
           <a href="https://www.instagram.com/sonovdragons.artworks/" target="_blank"><img src="img/instagram.svg" alt="instagram" width="24" height="24"></a>
         </div>
-      </footer>
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-      <script src="index.js"></script>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </body>
 </html>

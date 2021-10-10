@@ -286,6 +286,7 @@ form {
   font-weight: 200;
   width: 70%;
   margin: auto;
+  padding-bottom: 15px;
 }
 
 form label {
@@ -672,13 +673,13 @@ div {
 }
 
 #form-pedidos {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 1.5625rem;
+  padding-top: 0;
+  margin-top: 15px;
 }
 
 #form-pedidos h2 {
-  font-size: 200%;
+  margin-bottom: 45px;
+  margin-top: 15px;
 }
 
 #form-pedidos label {
@@ -687,16 +688,10 @@ div {
   padding: 5px;
 }
 
-#form-pedidos button {
-  color: white;
-  -webkit-box-shadow: 5px 5px 20px gray;
-          box-shadow: 5px 5px 20px gray;
-}
-
 #form-pedidos .selectivo {
   width: 45%;
   height: 50%;
-  font-size: 150%;
+  font-size: 100%;
   padding: 5px;
   margin: 5px;
   text-align: center;
@@ -720,8 +715,7 @@ div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 30%;
-  height: 50%;
+  width: 80%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -735,7 +729,7 @@ div {
 
 #form-pedidos .form-pedidos-inputs .btn {
   margin-top: 1.5625rem;
-  margin-bottom: 0.9375rem;
+  margin-bottom: 1.5625rem;
   width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -745,7 +739,12 @@ div {
           justify-content: center;
   border-radius: 10px;
   background-color: #025F69;
-  font-size: 140%;
+  font-size: 100%;
+}
+
+#form-pedidos .form-pedidos-inputs .btn:hover {
+  background-color: gray;
+  color: white;
 }
 
 #form-pedidos .form-pedidos-inputs #t-servicio {
@@ -761,7 +760,111 @@ div {
 }
 
 #final {
-  margin-top: 35px;
+  margin-top: 25px;
   font-size: 160%;
+}
+
+.btn {
+  margin-top: 1.5625rem;
+  margin-bottom: 0.9375rem;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  color: white;
+  background-color: #025F69;
+  font-size: 140%;
+}
+
+.btn:hover {
+  background-color: gray;
+  color: white;
+}
+
+.btn_modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+.mdl {
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+  height: 600px;
+  -webkit-box-shadow: 1px 1px 30px black;
+          box-shadow: 1px 1px 30px black;
+}
+
+.close_btn {
+  height: 25px;
+  width: 20px;
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.close_btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.modal_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 30px;
+  width: 100%;
+  margin: 0;
+  padding-top: 5px;
+}
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  display: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#modal {
+  display: none;
 }
 /*# sourceMappingURL=estilo.css.map */

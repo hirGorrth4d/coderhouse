@@ -47,6 +47,11 @@ $(document).ready(function(){
     let btnLimpiar =$("#btnLimpiar");
     btnLimpiar.on("click", borrarContenedor);
 
+    let btnAbrir =$("#btnModal");
+    btnAbrir.on("click", abrirModal);
+    let btnCerrar =$("#close_button");
+    btnCerrar.on("click", cerrarModal);
+
     function solicitarDatos (e) {
         e.preventDefault();
         let tipoServicio = $("#t-servicio").val().toUpperCase();
@@ -82,5 +87,42 @@ $(document).ready(function(){
         e.preventDefault();
         $("#cantUni").val("");
         $("#resultado").remove();
+    }
+
+    function abrirModal(e){
+        e.preventDefault();
+        // $("#abrirModal").prepend(`<div id="modal" class="mdl" style="display:none">
+        //                             <div id="form-pedidos" >
+                                        
+        //                                     <div class="modal_header">
+        //                                         <button id="close_button" class="close_btn">&times;</button>
+        //                                     </div>
+        //                                 <h2>Calcula el valor de tu pedido </h2>
+                                            
+        //                                 <form class="form-pedidos-inputs">
+        //                                     <select name="Servicio" id="t-servicio" class="selectivo">
+        //                                         <option value="Color base">Color Base</option>
+        //                                         <option value="Lijado y sin pintar">Lijado y sin Pintar</option>
+        //                                         <option value="Pintado completo">Pintado Completo</option>
+        //                                     </select>
+        //                                     <label for="cantidad de unidades">Cantidad de unidades</label>
+        //                                     <input type="number" id="cantUni" class="numero">
+                                            
+        //                                     <button id="btnCalcular" class="btn">Calcular</button>
+        //                                     <button id="btnLimpiar" class="btn">Limpiar resultado</button>
+        //                                     <div id="final"></div>
+        //                                 </form>
+                                        
+        //                             </div>
+        //                         </div>`);
+        // $("#abrirModal").append(`<div class="active" id="overlay" style="display:none"></div>`);
+        $("#modal").toggle("fast");
+        $("#overlay").fadeIn("fast");
+    }
+
+    function cerrarModal(e){
+        e.preventDefault();
+        $("#modal").toggle("fast");
+        $("#overlay").fadeOut("fast");
     }
 });
