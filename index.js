@@ -91,38 +91,25 @@ $(document).ready(function(){
 
     function abrirModal(e){
         e.preventDefault();
-        // $("#abrirModal").prepend(`<div id="modal" class="mdl" style="display:none">
-        //                             <div id="form-pedidos" >
-                                        
-        //                                     <div class="modal_header">
-        //                                         <button id="close_button" class="close_btn">&times;</button>
-        //                                     </div>
-        //                                 <h2>Calcula el valor de tu pedido </h2>
-                                            
-        //                                 <form class="form-pedidos-inputs">
-        //                                     <select name="Servicio" id="t-servicio" class="selectivo">
-        //                                         <option value="Color base">Color Base</option>
-        //                                         <option value="Lijado y sin pintar">Lijado y sin Pintar</option>
-        //                                         <option value="Pintado completo">Pintado Completo</option>
-        //                                     </select>
-        //                                     <label for="cantidad de unidades">Cantidad de unidades</label>
-        //                                     <input type="number" id="cantUni" class="numero">
-                                            
-        //                                     <button id="btnCalcular" class="btn">Calcular</button>
-        //                                     <button id="btnLimpiar" class="btn">Limpiar resultado</button>
-        //                                     <div id="final"></div>
-        //                                 </form>
-                                        
-        //                             </div>
-        //                         </div>`);
-        // $("#abrirModal").append(`<div class="active" id="overlay" style="display:none"></div>`);
+        $.getJSON(URLJSON, function (respuesta, estado){
+            if (estado === "success"){
+                    let misDatos = respuesta;
+                    for (const dato of misDatos){
+                        console.log(dato);
+                        $("#t-servicio").append(`<option value="${dato.tipo}">${dato.tipo}</option>`)
+                    }
+            }
+        })
         $("#modal").toggle("fast");
         $("#overlay").fadeIn("fast");
     }
 
     function cerrarModal(e){
         e.preventDefault();
+        borrarContenedor(e);
         $("#modal").toggle("fast");
         $("#overlay").fadeOut("fast");
     }
 });
+
+const URLJSON = "data/productos.json";

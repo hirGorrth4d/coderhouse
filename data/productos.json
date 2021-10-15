@@ -1,20 +1,19 @@
 
-{
-    "Productos":[
-        {
-            "id": "1",
-            "tipo": "color base",
-            "precio": "500"
-        },
-        {
-            "id": "2",
-            "tipo": "lijado y sin pintar",
-            "precio": "600"
-        },
-        {
-            "id": "3",
-            "tipo": "pintado completo",
-            "precio": "1000"
-        }
-    ]
-}
+
+[
+    {
+        "id": "1",
+        "tipo": "color base",
+        "precio": "500"
+    },
+    {
+        "id": "2",
+        "tipo": "lijado y sin pintar",
+        "precio": "600"
+    },
+    {
+        "id": "3",
+        "tipo": "pintado completo",
+        "precio": "1000"
+    }
+]

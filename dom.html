@@ -4,37 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css" />
     <title>Manipulando el DOM</title>
 </head>
 <body>
 
-    <div id="form-pedidos">
-        <div class="form-pedidos-titulo">
-            <button class="btn" id="btnPrincipal">Calcula el valor de tu pedido</button>
-
-            <div id="modal"></div>
-                <!-- <div class="modal-container">
-                    <form class="form-pedidos-inputs">
-                        
-                        <select name="Servicio" id="t-servicio">
-                            <option value="Color base">Color Base</option>
-                            <option value="Lijado y sin pintar">Lijado y sin Pintar</option>
-                            <option value="Pintado completo">Pintado Completo</option>
-                        </select>
-                        <label for="cantidad de unidades">Cantidad de unidades</label>
-                        <input type="number" id="cantUni">
-                        
-                        <button id="btnCalcular" class="btn">Calcular</button>
-                        <button id="btnLimpiar">Limpiar resultado</button>
-
-                        <label for="resultado">El servicio te vale: </label>
-                        <input type="text" id="funCalculo"> 
-                    </form>
-                </div>    -->
-            </div> 
-        </div>
+    <div class="btn_modal">
+        <button class="btn" id="btnModal">Calcula el valor de tu pedido</button>
     </div>
+    <!-- <div id="abrirModal">
+        <div id="modal" class="mdl">
+            <div id="form-pedidos">
+                
+                    <div class="modal_header">
+                        <button id="close_button" class="close_btn">&times;</button>
+                    </div>
+                <h2>Calcula el valor de tu pedido </h2>
+                    
+                <form class="form-pedidos-inputs">
+                    <select name="Servicio" id="t-servicio" class="selectivo">
+                        <option value="Color base">Color Base</option>
+                        <option value="Lijado y sin pintar">Lijado y sin Pintar</option>
+                        <option value="Pintado completo">Pintado Completo</option>
+                    </select>
+                    <label for="cantidad de unidades">Cantidad de unidades</label>
+                    <input type="number" id="cantUni" class="numero">
+                    
+                    <button id="btnCalcular" class="btn">Calcular</button>
+                    <button id="btnLimpiar" class="btn">Limpiar resultado</button>
+                    <div id="final"></div>
+                </form>
+                
+            </div>
+        </div>
+    </div>-->
+    <!-- <div class="active" id="overlay"></div>  -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     <script src="storage.js"></script>
 </body>
 </html>
