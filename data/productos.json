@@ -3,17 +3,18 @@
 [
     {
         "id": "1",
-        "tipo": "color base",
+        "tipo": "Color Base",
         "precio": "500"
     },
     {
         "id": "2",
-        "tipo": "lijado y sin pintar",
+        "tipo": "Lijado y sin pintar",
         "precio": "600"
     },
     {
         "id": "3",
-        "tipo": "pintado completo",
+        "tipo": "Pintado Completo",
         "precio": "1000"
     }
 ]
+

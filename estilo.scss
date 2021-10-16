@@ -651,7 +651,7 @@ div {
         .btn {
             margin: {
                 top:toRem(25);
-                bottom: toRem(25);
+                bottom: toRem(1);
             }
             width: 40%;
             display: flex;
@@ -685,7 +685,7 @@ div {
 .btn {
     margin: {
         top:toRem(25);
-        bottom: toRem(15);
+        bottom: toRem(5);
     }
     width: 40%;
     display: flex;
@@ -767,4 +767,8 @@ div {
 }
 #modal {
     display:none;
+}
+
+#abrirServicios {
+    display: none;
 }

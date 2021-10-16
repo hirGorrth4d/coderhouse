@@ -729,7 +729,7 @@ div {
 
 #form-pedidos .form-pedidos-inputs .btn {
   margin-top: 1.5625rem;
-  margin-bottom: 1.5625rem;
+  margin-bottom: 0.0625rem;
   width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -766,7 +766,7 @@ div {
 
 .btn {
   margin-top: 1.5625rem;
-  margin-bottom: 0.9375rem;
+  margin-bottom: 0.3125rem;
   width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -865,6 +865,10 @@ div {
 }
 
 #modal {
+  display: none;
+}
+
+#abrirServicios {
   display: none;
 }
 /*# sourceMappingURL=estilo.css.map */

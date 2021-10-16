@@ -50,82 +50,63 @@
     <div class="servicios__video fadeIn">
         <iframe width="853" height="480" class="video" src="https://www.youtube.com/embed/MWyMRikmUag" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <h3>Ejemplo de Trabajo para uso personal</h3>
-    </div>
-    <div class="fadeIn"><h2>Algunos de nuestros servicios</h2></div>
-    
-    <section id="grilla" class="bordeServicios fadeIn">
-        
-        <div class="espacioVacio"></div>
-        <div class="precio1"> 1 Unidad</div>
-        <div class="precio2"> 5+ Unidades</div>
-        <div class="precio3"> 50+ Unidades</div>
-        <div class="servicioA"> Color base</div>
-        <div class="servicioB"> Lijado y sin pintar</div>
-        <div class="servicioC"> Pintado Completo</div>
-        <div class="precioA1"> $500 </div>
-        <div class="precioA2"> $100 </div>
-        <div class="precioA3"> $50 </div>
-        <div class="precioB1"> $600 </div>
-        <div class="precioB2"> $200 </div>   
-        <div class="precioB3"> $150 </div>
-        <div class="precioC1"> $1000 </div>
-        <div class="precioC2"> $600 </div>
-        <div class="precioC3"> $550 </div>
-        
-    </section>
-    <!-- <div id="form-pedidos">
-        <div class="form-pedidos-titulo">
-        <h2>Calcula el valor de tu pedido </h2></div>
+        <button class="btn" id="btnServicios">Mira nuestros servicios</button>
 
-        <form class="form-pedidos-inputs">
-           
-            <select name="Servicio" id="t-servicio" class="selectivo">
-                <option value="Color base">Color Base</option>
-                <option value="Lijado y sin pintar">Lijado y sin Pintar</option>
-                <option value="Pintado completo">Pintado Completo</option>
-            </select>
-            <label for="cantidad de unidades">Cantidad de unidades</label>
-            <input type="number" id="cantUni" class="numero">
+    </div>
+    <div class="fadeIn" id="abrirServicios">
+        <h2>Algunos de nuestros servicios</h2>
+        <section id="grilla" class="bordeServicios fadeIn">
             
-            <button id="btnCalcular" class="btn">Calcular</button>
-            <button id="btnLimpiar" class="btn">Limpiar resultado</button>
+            <div class="espacioVacio"></div>
+            <div class="precio1"> 1 Unidad</div>
+            <div class="precio2"> 5+ Unidades</div>
+            <div class="precio3"> 50+ Unidades</div>
+            <div class="servicioA"> Color base</div>
+            <div class="servicioB"> Lijado y sin pintar</div>
+            <div class="servicioC"> Pintado Completo</div>
+            <div class="precioA1"> $500 </div>
+            <div class="precioA2"> $100 </div>
+            <div class="precioA3"> $50 </div>
+            <div class="precioB1"> $600 </div>
+            <div class="precioB2"> $200 </div>   
+            <div class="precioB3"> $150 </div>
+            <div class="precioC1"> $1000 </div>
+            <div class="precioC2"> $600 </div>
+            <div class="precioC3"> $550 </div>
+            
+        </section>
 
-
-            <div id="final"></div>
-        </form>
-    </div> -->
-    <div class="btn_modal">
-        <button class="btn" id="btnModal">Calcula el valor de tu pedido</button>
-    </div>
-    <div id="abrirModal">
-        <div id="modal" class="mdl">
-            <div id="form-pedidos">
-                
-                    <div class="modal_header">
-                        <button id="close_button" class="close_btn">&times;</button>
-                    </div>
-                <h2>Calcula el valor de tu pedido </h2>
+        <div class="btn_modal">
+            <button class="btn" id="btnModal">Calcula el valor de tu pedido</button>
+        </div>
+        <div id="abrirModal">
+            <div id="modal" class="mdl">
+                <div id="form-pedidos">
                     
-                <form class="form-pedidos-inputs">
-                    <select name="Servicio" id="t-servicio" class="selectivo">
-                        <!-- <option value="Color base">Color Base</option>
-                        <option value="Lijado y sin pintar">Lijado y sin Pintar</option>
-                        <option value="Pintado completo">Pintado Completo</option> -->
-                    </select>
-                    <label for="cantidad de unidades">Cantidad de unidades</label>
-                    <input type="number" id="cantUni" class="numero">
+                        <div class="modal_header">
+                            <button id="close_button" class="close_btn">&times;</button>
+                        </div>
+                    <h2>Calcula el valor de tu pedido </h2>
+                        
+                    <form class="form-pedidos-inputs">
+                        <select name="Servicio" id="t-servicio" class="selectivo">
+                            
+                        </select>
+                        <label for="cantidad de unidades">Cantidad de unidades</label>
+                        <input type="number" id="cantUni" class="numero">
+                        
+                        <button id="btnCalcular" class="btn">Calcular</button>
+                        <button id="btnLimpiar" class="btn">Limpiar resultado</button>
+                        <div id="final"></div>
+                    </form>
                     
-                    <button id="btnCalcular" class="btn">Calcular</button>
-                    <button id="btnLimpiar" class="btn">Limpiar resultado</button>
-                    <div id="final"></div>
-                </form>
-                
+                </div>
             </div>
         </div>
-    </div>
-    <div class="active" id="overlay"></div>
-    <div>
-        <h4>Preguntanos por Whatsapp por otros precios</h4>
+        <div class="active" id="overlay"></div>
+        <div>
+            <h4>Preguntanos por Whatsapp por otros precios</h4>
+        </div>
     </div>
     <footer class="footer__principal">
         <div class="footer__iconos">

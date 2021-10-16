@@ -1,18 +1,18 @@
-class producto {
-    constructor (id, tipo, precio) {
-        this.id = id;
-        this.tipo = tipo;
-        this.precio = parseInt(precio);
-    }
-    descuento5unidades() {
-        return this.precio = this.precio - 400;
-    }
+// class producto {
+//     constructor (id, tipo, precio) {
+//         this.id = id;
+//         this.tipo = tipo;
+//         this.precio = parseInt(precio);
+//     }
+//     descuento5unidades() {
+//         return this.precio = this.precio - 400;
+//     }
 
-    descuentoMuchasUnidades() {
-        return this.precio = (this.precio - 450);
-    }
+//     descuentoMuchasUnidades() {
+//         return this.precio = (this.precio - 450);
+//     }
 
-}
+// }
 
 // const descuentos = function (cantidadUnidades) {
 //     if(cantidadUnidades > 5) {
@@ -22,12 +22,28 @@ class producto {
 // }
 // }
 
-const productos = [];
-productos.push (new producto("1","COLOR BASE", "500"));
-productos.push (new producto ("2", "LIJADO Y SIN PINTAR", "600"));
-productos.push (new producto ("3","PINTADO COMPLETO", "1000"));
 
-const sesionGuardada = (clave, valor) => { localStorage.setItem(clave, valor)};
+let productos = [];
+
+function recuperarProductos(){
+    let stock = JSON.parse(localStorage.getItem("stock"));
+    if (stock) {
+        stock.forEach(el => productos.push(el));
+    }
+}
+
+$.getJSON("data/productos.json", function(data) {
+    console.log(data);
+    localStorage.setItem("stock", JSON.stringify(data));
+    recuperarProductos();
+})
+
+
+// productos.push (new producto("1","COLOR BASE", "500"));
+// productos.push (new producto ("2", "LIJADO Y SIN PINTAR", "600"));
+// productos.push (new producto ("3","PINTADO COMPLETO", "1000"));
+
+// const sesionGuardada = (clave, valor) => { localStorage.setItem(clave, valor)};
 
 // for (const producto of productos) {
 //     sesionGuardada ()
@@ -35,14 +51,11 @@ const sesionGuardada = (clave, valor) => { localStorage.setItem(clave, valor)};
 $(document).ready(function(){
 
 
-    sesionGuardada ("Servicios", JSON.stringify(productos));
+    // sesionGuardada ("Servicios", JSON.stringify(productos));
 
     let boton = $("#btnCalcular");
-    // boton.on("click", (solicitarDatos);
     boton.on("click", solicitarDatos);
 
-    // let final =$("#final");
-    // let contenedor = $("body").append("div");
 
     let btnLimpiar =$("#btnLimpiar");
     btnLimpiar.on("click", borrarContenedor);
@@ -71,20 +84,12 @@ $(document).ready(function(){
         
         if (cantidadUnidades < 6){
             let resultado = busqueda.precio*cantidadUnidades;
-            // resultado.value = busqueda.precio*cantidadUnidades;
-            // contenedor.innerHTML=`<h3> El servicio te vale $ ${resultado} </h3>`;
-            // final.appendChild(contenedor);
-            // $("#form-pedidos").append(`<h3> El servicio te vale $ ${resultado} </h3>`);
             $("#final").append(`<h3 id="resultado" class="fadeIn"> El servicio te vale $ ${resultado} </h3>`);
         } else if ((cantidadUnidades > 5) && (cantidadUnidades< 51)) {
             let resultado =(busqueda.descuento5unidades())*cantidadUnidades;
-            // contenedor.innerHTML=`<h3> El servicio te vale $ ${resultado} </h3>`;
-            // final.appendChild(contenedor);
             $("#final").append(`<h3 id="resultado" class="fadeIn"> El servicio te vale $ ${resultado} </h3>`);
         } else if (cantidadUnidades> 50) {
             let resultado = (busqueda.descuentoMuchasUnidades())*cantidadUnidades;
-            // contenedor.innerHTML=`<h3> El servicio te vale $ ${resultado} </h3>`;
-            // final.appendChild(contenedor);
             $("#final").append(`<h3 id="resultado" class="fadeIn"> El servicio te vale $ ${resultado} </h3>`);
         } else {
             resultado = "No ingresaste valor adecuado";
@@ -100,39 +105,7 @@ $(document).ready(function(){
         $("#resultado").remove();
     }
 
-    // function abrirModal(e){
-    //     e.preventDefault();
-    //     $("body").prepend(`<div id="abrirModal">
-    //                                     <div id="modal" class="mdl">
-    //                                     <div id="form-pedidos">
-                                            
-    //                                             <div class="modal_header">
-    //                                                 <button id="close_button" class="close_btn">&times;</button>
-    //                                             </div>
-    //                                         <h2>Calcula el valor de tu pedido </h2>
-                                                
-    //                                         <form class="form-pedidos-inputs">
-    //                                             <select name="Servicio" id="t-servicio" class="selectivo">
-    //                                                 <option value="asdasd">sadasd}</option>
-    //                                                 <option value="asdasd">$sadasd</option>
-    //                                                 <option value="asdasd">$sadasd</option>
-    //                                             </select>
-    //                                             <label for="cantidad de unidades">Cantidad de unidades</label>
-    //                                             <input type="number" id="cantUni" class="numero">
-                                                
-    //                                             <button id="btnCalcular" class="btn">Calcular</button>
-    //                                             <button id="btnLimpiar" class="btn">Limpiar resultado</button>
-    //                                             <div id="final"></div>
-    //                                         </form>
-                                            
-    //                                     </div>
-    //                                 </div>
-    //                             </div>
-    //                             <div class="active" id="overlay"></div>`);
-    //     // $("#abrirModal").append(`<div class="active" id="overlay" style="display:none"></div>`);
-    //     $("#modal").toggle("fast");
-    //     $("#overlay").fadeIn("fast");
-    // }
+
 
     function cerrarModal(e){
         e.preventDefault();
