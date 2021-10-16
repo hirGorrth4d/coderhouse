@@ -84,6 +84,7 @@ $(document).ready(function(){
             
         }
         console.log(busqueda);
+        
     }
 
 
