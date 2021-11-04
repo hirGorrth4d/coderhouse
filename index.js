@@ -1,34 +1,3 @@
-// class producto {
-//     constructor (id, tipo, precio) {
-//         this.id = id;
-//         this.tipo = tipo;
-//         this.precio = parseInt(precio);
-//     }
-//     descuento5unidades() {
-//         return this.precio = this.precio - 400;
-//     }
-
-//     descuentoMuchasUnidades() {
-//         return this.precio = (this.precio - 450);
-//     }
-
-// }
-
-// const descuentos = function (cantidadUnidades) {
-//     if(cantidadUnidades > 5) {
-//         this.precio -= 400;
-// } else if (cantidadUnidades >= 50){
-//     this.precio -= 450;
-// }
-// }
-
-// const productos = [];
-// productos.push (new producto("1","COLOR BASE", "500"));
-// productos.push (new producto ("2", "LIJADO Y SIN PINTAR", "600"));
-// productos.push (new producto ("3","PINTADO COMPLETO", "1000"));
-
-// const sesionGuardada = (clave, valor) => { localStorage.setItem(clave, valor)};
-
 $(document).ready(function(){
     let productos = [];
     const URLJSON = "data/productos.json";
@@ -46,11 +15,10 @@ $(document).ready(function(){
         recuperarProductos();
     })
     
-
-    // sesionGuardada ("Servicios", JSON.stringify(productos));
-
+    
     let boton = $("#btnCalcular");
     boton.on("click", solicitarDatos);
+    
 
     let btnLimpiar =$("#btnLimpiar");
     btnLimpiar.on("click", borrarContenedor);
@@ -70,25 +38,17 @@ $(document).ready(function(){
         let tipoServicio = $("#t-servicio").val();
         let cantidadUnidades = $("#cantUni").val();
         let busqueda = productos.filter(x => x.tipo == tipoServicio)[0];
-        $("#btnCalcular").disabled = true;
-        $("#btnLimpiar").disabled = false;
         if (cantidadUnidades < 6){
             let resultado = busqueda.precio*cantidadUnidades;
             $("#final").append(`<h3 id="resultado" class="fadeIn"> El servicio te vale $ ${resultado} </h3>`);
-            
         } else if ((cantidadUnidades > 5) && (cantidadUnidades< 51)) {
-            // let resultado = (busqueda.precio*cantidadUnidades - ((busqueda.precio*cantidadUnidades)*25)/100);
             let resultado = ((busqueda.precio-400)* cantidadUnidades);
             $("#final").append(`<h3 id="resultado" class="fadeIn"> El servicio te vale $ ${resultado} </h3>`);
-            
-        } else if (cantidadUnidades> 50) {
-            // let resultado = (busqueda.precio*cantidadUnidades - ((busqueda.precio*cantidadUnidades)*35)/100);
+        } else if (cantidadUnidades> 50) {  
             let resultado = ((busqueda.precio-450)* cantidadUnidades);
             $("#final").append(`<h3 id="resultado" class="fadeIn"> El servicio te vale $ ${resultado} </h3>`);
-            
         } else {
             resultado = "No ingresaste valor adecuado";
-            
         }
         console.log(busqueda);
         
@@ -99,9 +59,6 @@ $(document).ready(function(){
         e.preventDefault();
         $("#cantUni").val("");
         $("#resultado").remove();
-        $("#btnCalcular").disabled = false;
-        $("#btnLimpiar").disabled = true;
-        
     }
 
     function abrirModal(e){
