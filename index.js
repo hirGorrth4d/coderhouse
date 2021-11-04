@@ -54,6 +54,7 @@ $(document).ready(function(){
 
     let btnLimpiar =$("#btnLimpiar");
     btnLimpiar.on("click", borrarContenedor);
+    
 
     let btnAbrir =$("#btnModal");
     btnAbrir.on("click", abrirModal);
@@ -61,24 +62,30 @@ $(document).ready(function(){
     btnCerrar.on("click", cerrarModal);
     let btnServicios = $("#btnServicios");
     btnServicios.on("click", abrirServicios);
+    
+
 
     function solicitarDatos (e) {
         e.preventDefault();
         let tipoServicio = $("#t-servicio").val();
         let cantidadUnidades = $("#cantUni").val();
         let busqueda = productos.filter(x => x.tipo == tipoServicio)[0];
-        
+        $("#btnCalcular").disabled = true;
+        $("#btnLimpiar").disabled = false;
         if (cantidadUnidades < 6){
             let resultado = busqueda.precio*cantidadUnidades;
             $("#final").append(`<h3 id="resultado" class="fadeIn"> El servicio te vale $ ${resultado} </h3>`);
+            
         } else if ((cantidadUnidades > 5) && (cantidadUnidades< 51)) {
             // let resultado = (busqueda.precio*cantidadUnidades - ((busqueda.precio*cantidadUnidades)*25)/100);
             let resultado = ((busqueda.precio-400)* cantidadUnidades);
             $("#final").append(`<h3 id="resultado" class="fadeIn"> El servicio te vale $ ${resultado} </h3>`);
+            
         } else if (cantidadUnidades> 50) {
             // let resultado = (busqueda.precio*cantidadUnidades - ((busqueda.precio*cantidadUnidades)*35)/100);
             let resultado = ((busqueda.precio-450)* cantidadUnidades);
             $("#final").append(`<h3 id="resultado" class="fadeIn"> El servicio te vale $ ${resultado} </h3>`);
+            
         } else {
             resultado = "No ingresaste valor adecuado";
             
@@ -92,6 +99,8 @@ $(document).ready(function(){
         e.preventDefault();
         $("#cantUni").val("");
         $("#resultado").remove();
+        $("#btnCalcular").disabled = false;
+        $("#btnLimpiar").disabled = true;
         
     }
 
@@ -122,6 +131,7 @@ $(document).ready(function(){
         e.preventDefault();
         $("#abrirServicios").toggle();
     }
+
 });
 
 
